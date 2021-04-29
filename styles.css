@@ -26,7 +26,7 @@ a {
     text-decoration: none;
 }
 
-/*--------------------- Sur les écrans, quand la largeur de la fenêtre fait au minimum 1440px ---------------------*/
+/*--------------------- DESKTOP width>1440px ---------------------*/
 @media screen and (min-width: 1440px) {
 
 /*--  HEADER  --*/
@@ -60,7 +60,7 @@ nav {
     align-items: center;
 }
 
-.nav-link[active="true"] {
+.nav-link[data-active="true"] {
     margin-bottom: 4px;
     color: #0065FC;
     border-top: solid 4px #0065FC;
@@ -126,10 +126,11 @@ main {
     border-bottom: solid 1px #F2F2F2;
 }
 
-.search-button {
+.big-search-button {
     font-size: 1rem;
     min-width: 45px;
     width: 120px;
+    height: 100%;
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
     display: flex;
@@ -138,6 +139,10 @@ main {
     border: none;
     color: white;
     background-color: #0065FC
+}
+
+.small-search-button {
+    visibility: hidden;
 }
 
 .search-filters {
@@ -246,7 +251,7 @@ main {
     align-content: space-between;
 }
 
-.accomodation h1, .accomodation h3, .accomodation p {
+.accomodation h2, .accomodation h3, .accomodation p {
     margin: 0;
 }
 
@@ -555,7 +560,7 @@ main {
 }
 
 
-/*--------------------- Sur les écrans, quand la largeur de la fenêtre fait entre 980 px et 1440px ---------------------*/
+/*--------------------- LAPTOP/TABLET 980px>width>1440px ---------------------*/
 @media screen and (min-width: 980px) and (max-width: 1439px) {
 
     /*--  HEADER  --*/
@@ -589,7 +594,7 @@ main {
         align-items: center;
     }
     
-    .nav-link[active="true"] {
+    .nav-link[data-active="true"] {
         margin-bottom: 4px;
         color: #0065FC;
         border-top: solid 4px #0065FC;
@@ -654,10 +659,11 @@ main {
         border-bottom: solid 1px #F2F2F2;
     }
     
-    .search-button {
+    .big-search-button {
         font-size: 1rem;
         min-width: 45px;
         width: 120px;
+        height: 100%;
         border-top-right-radius: 1rem;
         border-bottom-right-radius: 1rem;
         display: flex;
@@ -665,6 +671,10 @@ main {
         border: none;
         color: white;
         background-color: #0065FC
+    }
+
+    .small-search-button {
+        visibility: hidden;
     }
     
     .search-filters {
@@ -772,7 +782,7 @@ main {
         align-content: space-between;
     }
     
-    .accomodation h1, .accomodation h3, .accomodation p {
+    .accomodation h2, .accomodation h3, .accomodation p {
         margin: 0;
     }
     
@@ -1061,8 +1071,8 @@ main {
 }
 
 
-    /*--------------------- Sur les écrans, quand la largeur de la fenêtre fait au minimum 1440px ---------------------*/
-@media screen and (min-width: 600px) and (max-width: 980px) {
+    /*--------------------- TABLET 600px>width>980px ---------------------*/
+@media screen and (min-width: 600px) and (max-width: 979px) {
 
     /*--  HEADER  --*/
     
@@ -1095,7 +1105,7 @@ main {
         align-items: center;
     }
     
-    .nav-link[active="true"] {
+    .nav-link[data-active="true"] {
         margin-bottom: 4px;
         color: #0065FC;
         border-top: solid 4px #0065FC;
@@ -1155,10 +1165,11 @@ main {
         border-bottom: solid 1px #F2F2F2;
     }
     
-    .search-button {
+    .big-search-button {
         font-size: 1rem;
         min-width: 45px;
         width: 120px;
+        height: 100%;
         border-top-right-radius: 1rem;
         border-bottom-right-radius: 1rem;
         display: flex;
@@ -1166,6 +1177,10 @@ main {
         border: none;
         color: white;
         background-color: #0065FC
+    }
+
+    .small-search-button {
+        visibility: hidden;
     }
     
     .search-filters {
@@ -1272,7 +1287,7 @@ main {
         align-content: space-between;
     }
     
-    .accomodation h1, .accomodation h3, .accomodation p {
+    .accomodation h2, .accomodation h3, .accomodation p {
         margin: 0;
     }
     
@@ -1304,7 +1319,7 @@ main {
     }
     
     .relevant-card {
-        width: 30%;
+        width: 47%;
         height: 220px;
         border-radius: 1rem;
         padding: 0.3rem;
@@ -1314,7 +1329,7 @@ main {
     }
     
     .relevant-card:hover {
-        width: 30%;
+        width: 47%;
         height: 220px;
         border-radius: 1rem;
         padding: 0.3rem;
@@ -1382,14 +1397,14 @@ main {
     
     #accomodation-pop-card {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-between;
         align-content: space-between;
     }
     
     .popular-card {
-        width: 30%;
-        height: 150px;
+        width: 100%;
+        height: 170px;
         border-radius: 1rem;
         padding: 0.3rem;
         margin-top: 2rem;
@@ -1400,8 +1415,8 @@ main {
     }
     
     .popular-card:hover {
-        width: 30%;
-        height: 150px;
+        width: 100%;
+        height: 170px;
         border-radius: 1rem;
         padding: 0.3rem;
         margin-top: 2rem;
@@ -1454,15 +1469,14 @@ main {
     #activity {
         padding: 2rem 0;
         width: 100%;
-        min-width: 885px;
     }
     
     #activity-card {
         display: grid;
-        grid-template-columns: 31% 31% 31%;
+        grid-template-columns: 47% 47%;
         column-gap: 2rem;
         justify-content: space-between;
-        grid-template-rows: 250px 250px;
+        grid-template-rows: 250px 250px 250px;
         row-gap: 2rem;
     }
     
@@ -1518,23 +1532,23 @@ main {
     }
     
     .activity-card3 {
-        grid-row: 1;
-        grid-column: 3;
-    }
-    
-    .activity-card4 {
         grid-row: 2;
         grid-column: 1;
     }
     
-    .activity-card5 {
+    .activity-card4 {
         grid-row: 2;
         grid-column: 2;
     }
     
+    .activity-card5 {
+        grid-row: 3;
+        grid-column: 1;
+    }
+    
     .activity-card6 {
-        grid-row: 2;
-        grid-column: 3;
+        grid-row: 3;
+        grid-column: 2;
     }
     
 
@@ -1543,14 +1557,13 @@ main {
     .footer {
         padding: 3rem;
         display: flex;
-        justify-content: space-around;
         flex-flow: row wrap;
         background-color: #F2F2F2;
     }
     
 
     .footer div {
-        width: 31%;
+        margin-right: 4rem;
         display: flex;
         flex-direction: column;
         align-content: center;
@@ -1559,3 +1572,4 @@ main {
          padding-bottom: 1rem;
     }
 }
+

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="fr"></html>
+<html lang="fr">
 
-<html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
     <title>Reservia</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="https://kit.fontawesome.com/0fe66b737d.js" crossorigin="anonymous"></script>
@@ -12,10 +13,10 @@
 
 <!--  HEADER  -->
 <header>
-        <img class="logo" src="images/logo/Reservia.svg"/>
+        <img class="logo" src="images/logo/Reservia.svg" alt="reservia"/>
         <nav>
-            <a class="nav-link" href="#accomodation" active="true">Hébergements</a></li>
-            <a class="nav-link" href="#activity" active="false">Activités</a>
+            <a class="nav-link" href="#accomodation" data-active="true">Hébergements</a>
+            <a class="nav-link" href="#activity" data-active="false">Activités</a>
         </nav>
         <div class="subscribe">
             <a href="#">S'inscrire</a>
@@ -35,7 +36,10 @@
     <form id="search-form" >
         <i class="fas fa-map-marker-alt"></i>
         <input class="search-city" type="search" name="search-city" placeholder="Ville" value="Marseille, France"/>
-        <input class="search-button" type="submit" value="Rechercher">
+        <div class="search-button">
+            <input class="big-search-button" type="submit" value="Rechercher">
+            <i class="small-search-button fas fa-search"></i>
+        </div>
     </form>
 
     <div class="search-filters">   
@@ -73,18 +77,18 @@
 
     <!--///  ACCOMODATION SECTION  \\\-->
 <section class="accomodation">
-
-        <!--///--  RELEVANT ARCTICLE  --\\\-->
+    <h2 hidden>accomodation</h2>
+        <!--///-  RELEVANT ARCTICLE  -\\\-->
     <article id="accomodation-relevant">
-        <h1>Hébergements <span>à Marseille</span></h1>
+        <h2>Hébergements <span>à Marseille</span></h2>
             <div id="accomodation-relevant-card">
                 <a href="#" class="relevant-card aubergelacannebière">
                     <div class="relevant-image-box">
-                        <img class="relevant-image" src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="">
+                        <img class="relevant-image" src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Auberge la Cannebière">
                     </div> 
                     <div class="relevant-info">
                         <h3 class="card-title">Auberge la Cannebière</h3>
-                        <p class="card-price">Nuit à partir de <span class="price">25€</span class="price"></p>
+                        <p class="card-price">Nuit à partir de <span class="price">25€</span></p>
                         <div class="star-rating">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -97,7 +101,7 @@
             
                 <a href="#" class="relevant-card hotelduport">
                     <div class="relevant-image-box">
-                        <img class="relevant-image" src="images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="">
+                        <img class="relevant-image" src="images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="Hôtel du port">
                     </div>
                     <div class="relevant-info">
                         <h3 class="card-title">Hôtel du port</h3>
@@ -114,7 +118,7 @@
             
                 <a href="#" class="relevant-card hotellesmouettes">
                     <div class="relevant-image-box">
-                        <img class="relevant-image" src="images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="">
+                        <img class="relevant-image" src="images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="Hôtel Les mouettes">
                     </div>
                     <div class="relevant-info">
                         <h3 class="card-title">Hôtel Les mouettes</h3>
@@ -131,7 +135,7 @@
 
                 <a href="#" class="relevant-card hoteldelamer">
                     <div class="relevant-image-box">
-                        <img class="relevant-image" src="images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="">
+                        <img class="relevant-image" src="images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="Hôtel de la mer">
                     </div>
                     <div class="relevant-info">
                         <h3 class="card-title">Hôtel de la mer</h3>
@@ -148,7 +152,7 @@
 
                 <a href="#" class="relevant-card aubergelepanier">
                     <div class="relevant-image-box">
-                        <img class="relevant-image" src="images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="">
+                        <img class="relevant-image" src="images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="Auberge Le Panier">
                     </div>
                     <div class="relevant-info">
                         <h3 class="card-title">Auberge Le Panier</h3>
@@ -165,7 +169,7 @@
 
                 <a href="#" class="relevant-card hotelchezamina">
                     <div class="relevant-image-box">
-                        <img class="relevant-image" src="images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="">
+                        <img class="relevant-image" src="images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="Hôtel chez Amina">
                     </div>
                     <div class="relevant-info">
                         <h3 class="card-title">Hôtel chez Amina</h3>
@@ -183,19 +187,19 @@
 
         <div id="plus">Afficher plus</div>
     </article>
-        <!--\\\--  RELEVANT ARCTICLE  --///-->
+        <!--\\\-  RELEVANT ARCTICLE  -///-->
 
-        <!--///--  POPULAR ASIDE  --\\\-->
+        <!--///-  POPULAR ASIDE  -\\\-->
     <aside id="accomodation-pop">
         <div class="popular-h">
-            <h1>Les plus populaires</h1>
+            <h2>Les plus populaires</h2>
             <i class="fas fa-chart-line"></i>
         </div>
         <div id="accomodation-pop-card">
 
             <a href="#" class="popular-card hotellesoleildumatin">
                 <div class="popular-image-box">   
-                    <img class="popular-image" src="images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="">
+                    <img class="popular-image" src="images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="Hôtel Le soleil du matin">
                 </div>
                 <div class="popular-info">
                     <h3 class="card-title">Hôtel Le soleil du matin</h3>
@@ -212,10 +216,10 @@
         
             <a href="#" class="popular-card aucoeurdeleau-chambresdhotes">
                 <div class="popular-image-box">
-                    <img class="popular-image" src="images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="">
+                    <img class="popular-image" src="images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="Au cœur de l'eau">
                 </div>
                 <div class="popular-info">
-                    <h3 class="card-title">Au cœur de l'eau</br>Chambres d'hôtes</h3>
+                    <h3 class="card-title">Au cœur de l'eau<br>Chambres d'hôtes</h3>
                     <p class="card-price">Nuit à partir de  <span class="price">71€</span></p>
                     <div class="star-rating">
                         <i class="fas fa-star"></i>
@@ -229,7 +233,7 @@
         
             <a href="#" class="popular-card hoteltoutbleuetblanc">
                 <div class="popular-image-box">
-                    <img class="popular-image" src="images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="">
+                    <img class="popular-image" src="images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="Hôtel Tout bleu et Blanc">
                 </div>
                 <div class="popular-info">
                     <h3 class="card-title">Hôtel Tout bleu et Blanc</h3>
@@ -245,13 +249,13 @@
             </a>
         </div>
     </aside>
-        <!--\\\--  POPULAR ASIDE  --///-->
+        <!--\\\-  POPULAR ASIDE  -///-->
 </section>
     <!--\\\  ACCOMODATION SECTION  ///-->
 
     <!--///  ACTIVITY SECTION  \\\-->
 <section id="activity">
-    <h1 class="activity-title">Activités <span>à Marseille</span></h1>
+    <h2 class="activity-title">Activités <span>à Marseille</span></h2>
         <div class="activity">
             <div id="activity-card">
 
