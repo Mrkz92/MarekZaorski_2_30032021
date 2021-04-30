@@ -220,8 +220,6 @@ main {
     flex-wrap: wrap;
 }
 
-
-
 .search-result {
     display: flex;
     flex-direction: row;
@@ -239,7 +237,6 @@ main {
     border: solid 1px #F2F2F2;
     color: #0065FC;
 }
-
 
 /*--///  ACCOMODATION SECTION  ///--*/
 
@@ -262,7 +259,6 @@ main {
 .fa-star-inactive {
     color: #F2F2F2;
 }
-
 
 /*--///--  RELEVANT ARTICLE  --///--*/
 
@@ -340,7 +336,6 @@ main {
     display: flex;
     align-self: flex-end;
 }
-
 
 /*--///--  POPULAR ASIDE  --///--*/
 
@@ -469,13 +464,6 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.activity-image {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    object-fit: cover;
 }
 
 .activity-card h3 {
