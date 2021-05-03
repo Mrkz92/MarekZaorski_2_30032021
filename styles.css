@@ -29,7 +29,7 @@ a {
 /*--  MAIN  --*/
 
 main {
-    padding: 0 3rem;
+    padding: 0 2rem;
 }
 
 /*--///  SEARCH SECTION  ///---*/
@@ -408,7 +408,7 @@ main {
 /*--  FOOTER  --*/
 
 .footer {
-    padding: 3rem;
+    padding: 2rem;
     display: flex;
     flex-flow: row wrap;
     background-color: #F2F2F2;
@@ -439,7 +439,7 @@ main {
     /*--///-  POPULAR ASIDE  -///--*/
 
     #accomodation-pop {
-        width: 30%;
+        width: 29%;
     }
 
     /*--/// ACTIVITY SECTION ///--*/
@@ -779,13 +779,12 @@ main {
     
     #accomodation-pop {
         border-radius: unset;
-        padding: 1rem 1rem
+        padding: 2rem 1rem
     }
 
     #accomodation-pop-card {
         width: auto;
         display: flex;
-        flex-direction: column;
         justify-content: space-between;
         align-content: space-between;
     }
