@@ -672,6 +672,12 @@ main {
         border-top: solid 4px #0065FC;
     }
 
+    .nav-link:hover {
+        margin-bottom: 4px;
+        color: #0065FC;
+        border-top: solid 4px #0065FC;
+    }
+
     .subscribe {
         margin: 3rem 1.5rem;
         position: relative;
