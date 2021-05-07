@@ -642,7 +642,7 @@ main {
 @media screen and (min-width: 600px) {
     
     header {
-        height: 120px;
+        height: auto;
         padding: 0 3rem;
         display: flex;
         justify-content: flex-end;
@@ -668,26 +668,31 @@ main {
         padding: 3rem 1.5rem;
         display: flex;
         align-items: center;
+        border-top: solid 4px transparent;
+        border-bottom: solid 4px transparent;
     }
 
     .nav-link[data-active="true"] {
-        margin-bottom: 4px;
         color: #0065FC;
         border-top: solid 4px #0065FC;
+        border-bottom: solid 4px transparent;
     }
 
     .nav-link:hover {
-        margin-bottom: 4px;
         color: #0065FC;
         border-top: solid 4px #0065FC;
+        border-bottom: solid 4px transparent;
     }
 
     .subscribe {
-        margin: 3rem 1.5rem;
+        padding: 3rem 1.5rem;
         position: relative;
         display: flex;
+        border-top: solid 4px transparent;
+        border-bottom: solid 4px transparent;
         color: #0065FC;
     }
+
 }
 
 /*--------------------- SMARTPHONE width>600px ---------------------*/   
